@@ -8,7 +8,7 @@ LTS_Bin_Dir="$(cd "${LTS_BIN}"; pwd)"
 
 cd $LTS_Bin_Dir
 
-mvn clean install -U -DskipTests
+/usr/local/maven/bin/mvn clean install -U -DskipTests
 
 Dist_Bin_Dir="$LTS_Bin_Dir/dist/lts-$VERSION-bin"
 mkdir -p $Dist_Bin_Dir
@@ -20,12 +20,12 @@ mkdir -p $Dist_Bin_Dir
 # 打包
 Startup_Dir="$LTS_Bin_Dir/lts-startup/"
 cd $Startup_Dir
-mvn clean assembly:assembly -DskipTests -Pdefault
+/usr/local/maven/bin/mvn clean assembly:assembly -DskipTests -Pdefault
 
 cp -rf $Startup_Dir/target/lts-bin/lts/*  $Dist_Bin_Dir
 
 mkdir -p $Dist_Bin_Dir/war/jetty/lib
-mvn clean assembly:assembly -DskipTests -Plts-admin
+/usr/local/maven/bin/mvn clean assembly:assembly -DskipTests -Plts-admin
 cp -rf $Startup_Dir/target/lts-bin/lts/lib  $Dist_Bin_Dir/war/jetty
 cp -rf $LTS_Bin_Dir/lts-admin/target/lts-admin-$VERSION.war $Dist_Bin_Dir/war/lts-admin.war
 
