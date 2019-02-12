@@ -117,11 +117,8 @@ lts-{version}-bin的文件结构
 ```java
 -- lts-${version}-bin
     |-- bin
-    |   |-- jobtracker.cmd
     |   |-- jobtracker.sh
-    |   |-- lts-admin.cmd
     |   |-- lts-admin.sh
-    |   |-- lts-monitor.cmd
     |   |-- lts-monitor.sh
     |   |-- tasktracker.sh
     |-- conf
