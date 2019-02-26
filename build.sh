@@ -31,5 +31,5 @@ cp -rf $LTS_Bin_Dir/lts-admin/target/lts-admin-$VERSION.war $Dist_Bin_Dir/war/lt
 
  cd $LTS_Bin_Dir/dist
  rm -rf lts-$VERSION-bin/bin/*.cmd
- tar -zcvf lts-$VERSION-bin.tar.gz lts-$VERSION-bin/*
- rm -rf lts-$VERSION-bin
+ # tar -zcvf lts-$VERSION-bin.tar.gz lts-$VERSION-bin/*
+ # rm -rf lts-$VERSION-bin
